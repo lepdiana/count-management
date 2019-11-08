@@ -22,8 +22,6 @@ function TransactionList() {
     this[a.category].amount += a.amount;
     }, Object.create(null));
 
-    console.log(result)
-
     return(
         <div className='expenseListContainer'>
             <Expense result={result} />
