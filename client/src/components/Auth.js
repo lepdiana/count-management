@@ -35,38 +35,41 @@ function Auth(){
     }
    
     return (
-        <div className='signupLoginContainer'>
-            {!toggle ?
-                <>
-                    <h1 className='authTitle'>Signup</h1>
-                    <AuthForm 
-                        inputs={inputs}
-                        handleChange={handleChange}
-                        handleSubmit={handleSignupSubmit}
-                        btnText="Signup"
-                    />
-                    <p className='authErrMsg'>{authErrMsg}</p>
-                    <p className='member'>Already a member?</p>
-                    <button onClick={toggleForms} className='clickHere'>
-                        Click here
-                    </button>
-                </>
-            :
-                <>
-                    <h1 className='authTitle'>Login</h1>
-                    <AuthForm 
-                        inputs={inputs}
-                        handleChange={handleChange}
-                        handleSubmit={handleLoginSubmit}
-                        btnText="Login"
-                    />
-                    <p className='authErrMsg'>{authErrMsg}</p>
-                    <p className='member'>Not a member?</p>
-                    <button onClick={toggleForms} className='clickHere'>
-                        Click here
-                    </button>
-                </>
-            }
+        <div>
+            <h1 className='title'> Count Management</h1>
+            <div className='signupLoginContainer'>
+                {!toggle ?
+                    <>
+                        <h1 className='authTitle'>Signup</h1>
+                        <AuthForm 
+                            inputs={inputs}
+                            handleChange={handleChange}
+                            handleSubmit={handleSignupSubmit}
+                            btnText="Signup"
+                        />
+                        <p className='authErrMsg'>{authErrMsg}</p>
+                        <p className='member'>Already a member?</p>
+                        <button onClick={toggleForms} className='clickHere'>
+                            Click here
+                        </button>
+                    </>
+                :
+                    <>
+                        <h1 className='authTitle'>Login</h1>
+                        <AuthForm 
+                            inputs={inputs}
+                            handleChange={handleChange}
+                            handleSubmit={handleLoginSubmit}
+                            btnText="Login"
+                        />
+                        <p className='authErrMsg'>{authErrMsg}</p>
+                        <p className='member'>Not a member?</p>
+                        <button onClick={toggleForms} className='clickHere'>
+                            Click here
+                        </button>
+                    </>
+                }
+            </div>
         </div>
     )
 }
