@@ -35,7 +35,7 @@ function Transaction(props) {
                 <>
                     <p className='transactionText'>{ props.date }</p>
                     <h3 className='transactionTitle'>{ props.title }</h3>
-                    <p className='transactionText'>{ props.amount }</p>
+                    <p className='transactionText'>{ props.amount.toFixed(2) }</p>
                     <p className='transactionText'>{ props.category }</p>
                     <button onClick={ editToggler } className='transactionBtn'>Edit</button>
                     <button onClick={ (e) => props.deleteTransaction(props._id) } className='transactionBtn'>Delete</button>
