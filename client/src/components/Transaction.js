@@ -28,14 +28,21 @@ function Transaction(props) {
         editToggler()
     }
 
+    const dateWithOutTime = props.date.split("T")[0]
+    const restructureDate = dateWithOutTime.split("-")
+    const dateArr = []
+    dateArr.push(restructureDate[1], restructureDate[2], restructureDate[0])
+    const date = dateArr.join('-')
+
+    console.log(date)
 
     return(
         <div className='transactionContainer'>
             { !isEditing ?
                 <>
-                    <p className='transactionText'>{ props.date }</p>
+                    <p className='transactionText'>{ date }</p>
                     <h3 className='transactionTitle'>{ props.title }</h3>
-                    <p className='transactionText'>{ props.amount.toFixed(2) }</p>
+                    <p className='transactionText'>${ props.amount.toFixed(2) }</p>
                     <p className='transactionText'>{ props.category }</p>
                     <button onClick={ editToggler } className='transactionBtn'>Edit</button>
                     <button onClick={ (e) => props.deleteTransaction(props._id) } className='transactionBtn'>Delete</button>
