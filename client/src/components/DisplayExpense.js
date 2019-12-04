@@ -6,7 +6,7 @@ const DisplayExpense = (props) => {
             {props.sortedExpense.map((expense, i) => 
                 <div key={i} className='expenseContainer'>
                     <h3 className='expenseCategory'>{expense.category}</h3>
-                    <p className='expenseAmount'>{expense.amount.toFixed(2)}</p>
+                    <p className='expenseAmount'>${expense.amount.toFixed(2)}</p>
                 </div>
             )}
         </div>

@@ -34,7 +34,7 @@ function NetIncome(props) {
                 <>
                     <p className='netIncomeYear'>{ props.year }</p>
                     <h3 className='netIncomeMonth'>{ props.month }</h3>
-                    <p className='netIncomeIncome'>{ props.income.toFixed(2) }</p>
+                    <p className='netIncomeIncome'>${ props.income.toFixed(2) }</p>
                     <button onClick={ editToggler } className='netIncomeBtn'>Edit</button>
                     <button onClick={ (e) => props.deleteIncome(props._id) } className='netIncomeBtn'>Delete</button>
                 </>

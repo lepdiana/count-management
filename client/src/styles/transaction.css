@@ -29,6 +29,12 @@
                     0 20px 20px rgba(0,0,0,.15);
 }
 
+.transactionDate {
+    color: #333;
+    padding: 5px;
+    font-weight: 900;
+}
+
 .transactionText {
     color: #63906F;
     padding: 5px;
