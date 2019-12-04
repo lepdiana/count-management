@@ -39,8 +39,8 @@ function TransactionList() {
     return(
         <div className='transactionListContainer'>
              <a className="button" href="#popup1">Click here to add a transaction</a>
-            <div id="popup1" class="overlay">
-                <div class="popup">
+            <div id="popup1" className="overlay">
+                <div className="popup">
                     <div className='addNewTransaction'>
                         <h1 className='addNewTransactionTitle'>Add a transaction:</h1>
                         <form onSubmit={handleSubmit} className='addTransactionForm'>

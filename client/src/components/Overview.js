@@ -25,8 +25,8 @@ function Overview() {
 
     return (
         <div className='overviewContainer'>
-            <h3 className='overviewText'>Net Income: { netIncomeTotal.toFixed(2) }</h3>
-            <h3 className='overviewText'>Expense: { transactionTotal.toFixed(2) }</h3>
+            <h3 className='overviewText'>Inflow: { netIncomeTotal.toFixed(2) }</h3>
+            <h3 className='overviewText'>Outflow: { transactionTotal.toFixed(2) }</h3>
             <h3 className='overviewText'>Total: { overallTotal.toFixed(2) }</h3>
         </div>
     )

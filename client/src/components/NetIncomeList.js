@@ -40,8 +40,8 @@ function NetIncomeList() {
     return(
         <div className='netIncomeListContainer'>
             <a className="button" href="#popup1">Click Here to Add Monthly Income</a>
-            <div id="popup1" class="overlay">
-                <div class="popup">
+            <div id="popup1" className="overlay">
+                <div className="popup">
                     <div className='addNewIncome'>
                         <h1 className='addNewIncomeTitle'>Add your monthly income:</h1>
                         <form onSubmit={handleSubmit} className='addIncomeForm'>
