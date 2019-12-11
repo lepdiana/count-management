@@ -13,7 +13,8 @@ axios.interceptors.request.use((config) => {
 function CrudProvider(props) {
     const initState = {
         userNetIncomes: [],
-        userTransactions: []
+        userTransactions: [],
+        filteredNetIncomes: []
     }
 
     const [incomeState, setIncomeState] = useState(initState)

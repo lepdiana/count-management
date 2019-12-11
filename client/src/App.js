@@ -6,6 +6,7 @@ import Overview from './components/Overview.js'
 import NetIncomeList from './components/NetIncomeList.js'
 import ExpenseList from './components/ExpenseList.js'
 import TransactionList from './components/TransactionList.js'
+import BudgetList from './components/BudgetList.js'
 import Navbar from './components/Navbar.js'
 import ProtectedRoute from './shared/ProtectedRoute.js'
 
@@ -34,6 +35,11 @@ function App() {
           <ProtectedRoute 
             path='/transaction'
             component={TransactionList}
+            redirectTo='/'
+          />
+          <ProtectedRoute 
+            path='/budget'
+            component={BudgetList}
             redirectTo='/'
           />
         </Switch>
