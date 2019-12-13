@@ -4,7 +4,16 @@ import { CrudContext } from '../context/CrudProvider.js'
 
 function BudgetList(){
     const { userTransactions, getUserTransactions } = useContext(CrudContext)
-    const [filteredArr, setFilteredArr] = useState([])
+
+    // const initState = {
+    //     autoTransportArr: [],
+    //     billsUtilities: [],
+    //     businessServices: [],
+    //     education: [],
+    //     entertainment: [],
+
+    // }
+    // const [filteredArr, setFilteredArr] = useState(initState)
 
 
     useEffect(() => {
@@ -60,7 +69,7 @@ function BudgetList(){
         }
     })
 
-    console.log(filteredArr)
+    // console.log(filteredArr)
     
     return(
         <div>
