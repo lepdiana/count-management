@@ -1,8 +1,18 @@
-.budgetTitles {
+.budgetListContainer {
+    padding: 0 20px;
+}
+
+.budgetListTitles {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #000000;
+    line-height: 3em;
 }
+
+/* .allCategories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+} */
 
 .category {
     display: flex;

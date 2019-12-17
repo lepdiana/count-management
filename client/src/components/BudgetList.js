@@ -82,272 +82,274 @@ function BudgetList(){
     })
     
     return(
-        <div>
-            <div className='budgetTitles'>
+        <div className='budgetListContainer'>
+            <div className='budgetListTitles'>
                 <h1>Category</h1>
                 <h1>Budgeted</h1>
                 <h1>Activity</h1>
                 <h1>Available</h1>
             </div>
-            <div className='category'>
-                <p>Auto & Transport</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${autoTransport.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Bills & Utilities</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${billsUtilities.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Business Services</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${businessServices.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Education</p> 
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${education.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Entertainment</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${entertainment.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Fees & Charges</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${feesCharges.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Financial</p>      
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${financial.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Food & Dining</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${foodDining.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Gifts & Donations</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${giftsDonations.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Health & Fitness</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${healthFitness.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Home</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${home.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>            
-            <div className='category'>
-                <p>Kids</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${kids.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>            
-            <div className='category'>
-                <p>Misc Expenses</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${miscExpenses.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>            
-            <div className='category'>
-                <p>Personal Care</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${personalCare.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Pets</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${pets.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Shopping</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${shopping.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Taxes</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${taxes.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Transfer</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${transfer.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Travel</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${travel.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
-            </div>
-            <div className='category'>
-                <p>Uncategorized</p>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
-                <p>${uncategorized.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
-                <p>$0</p>
+            <div className='allCategories'>
+                <div className='category'>
+                    <p>Auto & Transport</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${autoTransport.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Bills & Utilities</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${billsUtilities.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Business Services</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${businessServices.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Education</p> 
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${education.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Entertainment</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${entertainment.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Fees & Charges</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${feesCharges.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Financial</p>      
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${financial.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Food & Dining</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${foodDining.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Gifts & Donations</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${giftsDonations.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Health & Fitness</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${healthFitness.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Home</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${home.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>            
+                <div className='category'>
+                    <p>Kids</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${kids.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>            
+                <div className='category'>
+                    <p>Misc Expenses</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${miscExpenses.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>            
+                <div className='category'>
+                    <p>Personal Care</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${personalCare.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Pets</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${pets.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Shopping</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${shopping.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Taxes</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${taxes.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Transfer</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${transfer.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Travel</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${travel.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
+                <div className='category'>
+                    <p>Uncategorized</p>
+                    <form>
+                        <input
+                            type='number'
+                            name='budgeted'
+                            value=''
+                            placeholder='0'
+                        />
+                    </form>
+                    <p>${uncategorized.reduce(function(sum, transaction){return sum += transaction.amount}, 0).toFixed(2)}</p>
+                    <p>$0</p>
+                </div>
             </div>
         </div>
     )
