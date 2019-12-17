@@ -33,7 +33,7 @@ function TransactionForm(props) {
                     <option value='Business Services'>Business Services</option>
                     <option value='Education'>Education</option>
                     <option value='Entertainment'>Entertainment</option>
-                    <option value='Fees & Changes'>Fees & Changes</option>
+                    <option value='Fees & Charges'>Fees & Charges</option>
                     <option value='Financial'>Financial</option>
                     <option value='Food & Dining'>Food & Dining</option>
                     <option value='Gifts & Donations'>Gifts & Donations</option>

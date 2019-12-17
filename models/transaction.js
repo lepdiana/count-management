@@ -16,7 +16,7 @@ const transactionSchema = new Schema ({
     },
     category: {
         type: String,
-        enum: ['Auto & Transport', 'Bills & Utilities', 'Business Services', 'Education', 'Entertainment', 'Fees & Changes', 'Financial', 'Food & Dining', 'Gifts & Donations', 'Health & Fitness', 'Home', 'Kids', 'Misc Expenses', 'Personal Care', 'Pets', 'Shopping', 'Taxes', 'Transfer', 'Travel', 'Uncategorized'],
+        enum: ['Auto & Transport', 'Bills & Utilities', 'Business Services', 'Education', 'Entertainment', 'Fees & Charges', 'Financial', 'Food & Dining', 'Gifts & Donations', 'Health & Fitness', 'Home', 'Kids', 'Misc Expenses', 'Personal Care', 'Pets', 'Shopping', 'Taxes', 'Transfer', 'Travel', 'Uncategorized'],
         required: true
     },
     user: {
