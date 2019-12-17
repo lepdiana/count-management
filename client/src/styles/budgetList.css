@@ -1,0 +1,11 @@
+.budgetTitles {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2em;
+}
