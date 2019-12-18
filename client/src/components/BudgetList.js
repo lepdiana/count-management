@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { CrudContext } from '../context/CrudProvider.js'
 import { set } from 'mongoose';
+import BudgetForm from './BudgetForm.js'
 
 import '../styles/budgetList.css'
 
@@ -132,147 +133,7 @@ function BudgetList(){
                 <p>Uncategorized</p>
             </div>
             <div className='budgetListBudgetedContainer'>
-                <form>
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                    <br />
-                    <input
-                        type='number'
-                        name='budgeted'
-                        value=''
-                        placeholder='0'
-                    />
-                </form>
+                <BudgetForm />
             </div>
             <div className='budgetListActivityContainer'>
                 <p>${ autoTransportAmt }</p>
