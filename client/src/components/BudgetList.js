@@ -102,6 +102,7 @@ function BudgetList(){
     
     return(
         <div className='budgetListContainer'>
+            <h1 className='construction'>***THIS PAGE IS CURRENTLY UNDER CONSTRUCTION.***</h1>
             <div className='budgetListTitles'>
                 <h1>Category</h1>
                 <h1>Budgeted</h1>

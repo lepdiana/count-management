@@ -3,6 +3,12 @@
     grid-template-columns: repeat(4, 1fr)
 }
 
+.construction {
+    grid-column: 1/5;
+    text-align: center;
+    color: #B72118;
+}
+
 .budgetListTitles {
     grid-column: 1/5;
     display: flex;
