@@ -1,21 +1,44 @@
 .budgetListContainer {
-    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
 }
 
 .budgetListTitles {
+    grid-column: 1/5;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: 1px solid #000000;
     line-height: 3em;
 }
 
-/* .allCategories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr)
-} */
-
-.category {
+.budgetListCategoryContainer {
+    grid-column: 1/2;
     display: flex;
-    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    line-height: 2em;
+}
+
+.budgetListBudgetedContainer {
+    grid-column: 2/3;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    line-height: 2em;
+}
+
+.budgetListActivityContainer {
+    grid-column: 3/4;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    line-height: 2em;
+}
+
+.budgetListAvailableContainer {
+    grid-column: 4/5;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     line-height: 2em;
 }
