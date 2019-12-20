@@ -5,7 +5,7 @@ import '../styles/transactionForm.css'
 function TransactionForm(props) {
     const { inputs, handleChange, handleSubmit } = props
 
-    return (
+    return(
         <div className='transactionFormContainer'>
             <form onSubmit={handleSubmit} className='transactionForm'>
                 <input 

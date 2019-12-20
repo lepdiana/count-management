@@ -14,11 +14,14 @@ function CrudProvider(props) {
     const initState = {
         userNetIncomes: [],
         userTransactions: [],
-        filteredNetIncomes: []
+        filteredNetIncomes: [],
+        userBudgets: []
     }
 
     const [incomeState, setIncomeState] = useState(initState)
     const [transactionState, setTransactionState] = useState(initState)
+    const [budgetState, setBudgetState] = useState(initState)
+
 
     const getUserNetIncomes = () => {
         axios.get('/api/netincome/user')
@@ -104,6 +107,49 @@ function CrudProvider(props) {
         .catch(err => console.log(err))
     }
 
+    const getUserBudgets = () => {
+        axios.get('/api/budget/user')
+            .then(res => {
+                setBudgetState(prevBudgetState => ({
+                    ...prevBudgetState, 
+                    userBudgets: res.data
+                }))
+            })
+            .catch(err => console.log(err))
+    }
+
+    const addBudget = newBudget => {
+        axios.post('/api/budget', newBudget)
+            .then(res => {
+                setBudgetState(prevBudgetState => ({
+                    ...prevBudgetState,
+                    userBudgets: [...prevBudgetState.userBudgets, res.data]
+                }))
+            })
+            .catch(err => console.log(err))
+    }
+
+    const deleteBudget = (_id) => {
+        axios.delete(`/api/budget/user/${_id}`)
+        setBudgetState(prevBudgetState => {
+            const filteredBudgetArray = prevBudgetState.userBudgets.filter(budget => {
+                return _id !== budget._id
+            })
+            return {userBudgets: filteredBudgetArray}
+        })
+    }
+
+    const editBudget = (_id, editBudget) => {
+        axios.put(`/api/budget/user/${_id}`, editBudget)
+        .then(res => {
+            setBudgetState(prevBudgetState => ({
+                userBudgets: prevBudgetState.userBudgets.map(budget => budget._id === _id ? res.data : budget)
+            }))
+        })
+        .catch(err => console.log(err))
+    }
+
+
     return (
         <CrudContext.Provider
             value={{
@@ -116,7 +162,11 @@ function CrudProvider(props) {
                 editIncome: editIncome,
                 addTransaction: addTransaction,
                 deleteTransaction: deleteTransaction,
-                editTransaction: editTransaction
+                editTransaction: editTransaction,
+                getUserBudgets: getUserBudgets,
+                addBudget: addBudget,
+                deleteBudget: deleteBudget,
+                editBudget: editBudget
             }}>
             { props.children }
         </CrudContext.Provider>
