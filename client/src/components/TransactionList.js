@@ -38,7 +38,7 @@ function TransactionList() {
 
     return(
         <div className='transactionListContainer'>
-             <a className="button" href="#popup1">Click here to add a transaction</a>
+            <a className="button" href="#popup1">Click here to add a transaction</a>
             <div id="popup1" className="overlay">
                 <div className="popup">
                     <div className='addNewTransaction'>

@@ -163,6 +163,7 @@ function CrudProvider(props) {
                 addTransaction: addTransaction,
                 deleteTransaction: deleteTransaction,
                 editTransaction: editTransaction,
+                userBudgets: budgetState.userBudgets,
                 getUserBudgets: getUserBudgets,
                 addBudget: addBudget,
                 deleteBudget: deleteBudget,

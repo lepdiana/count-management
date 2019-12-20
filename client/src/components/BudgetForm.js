@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { CrudContext } from '../context/CrudProvider.js'
 
 const BudgetFrom = props => {
 
-    const initBudget = {
+    const { userBudgets, getUserBudgets, addBudget, deleteBudget, editBudget } = useContext(CrudContext)
+
+    const initBudgetState = {
         autoTransportBudget: '',
         billsUtilitiesBudget: '',
         businessServicesBudget: '',
@@ -25,51 +28,23 @@ const BudgetFrom = props => {
         uncategorizedBudget: '',
     }
 
-    const [budget, setBudget] = useState(initBudget)
+    const [budgetState, setBudgetState] = useState(initBudgetState)
 
-    const handleChange = e => {
-        const { name, value } = e.target
-        setBudget({
+    const handleChange = event => {
+        const { name,value } = event.target.value
+        this.setState({
             [name]: value
         })
     }
 
-    const handleSubmit = e => {
-        // e.preventDefault()
-        setBudget({
-            autoTransportBudget: budget.autoTransportBudget,
-            billsUtilitiesBudget: budget.billsUtilitiesBudget,
-            businessServicesBudget: budget.businessServicesBudget,
-            educationBudget: budget.educationBudget,
-            entertainmentBudget: budget.entertainmentBudget,
-            feesChargesBudget: budget.feesChargesBudget,
-            financialBudget: budget.financialBudget,
-            foodDiningBudget: budget.foodDiningBudget,
-            giftsDonationsBudget: budget.giftsDonationsBudget,
-            healthFitnessBudget: budget.healthFitnessBudget,
-            homeBudget: budget.homeBudget,
-            kidsBudget: budget.kidsBudget,
-            miscExpensesBudget: budget.miscExpensesBudget,
-            personalCareBudget: budget.personalCareBudget,
-            petsBudget: budget.petsBudget,
-            shoppingBudget: budget.shoppingBudget,
-            taxesBudget: budget.taxesBudget,
-            transferBudget: budget.transferBudget,
-            travelBudget: budget.travelBudget,
-            uncategorizedBudget: budget.uncategorizedBudget,
-        })
-    }
-
-    console.log(budget)
-
     return (
         <div>
-            <form id='jsform' onSubmit={ handleSubmit }>
+            <form id='jsform'>
                 <input
                     type='number'
                     name='autoTransportBudget'
-                    value={ budget.autoTransportBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button onClick={() => {alert('hello')}}>Save</button>
@@ -77,8 +52,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='billsUtilitiesBudget'
-                    value={ budget.billsUtilitiesBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -86,8 +61,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='businessServicesBudget'
-                    value={ budget.businessServicesBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -95,8 +70,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='educationBudget'
-                    value={ budget.educationBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -104,8 +79,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='entertainmentBudget'
-                    value={ budget.entertainmentBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -113,8 +88,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='feesChargesBudget'
-                    value={ budget.feesChargesBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -122,8 +97,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='financialBudget'
-                    value={ budget.financialBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -131,8 +106,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='foodDiningBudget'
-                    value={ budget.foodDiningBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -140,8 +115,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='giftsDonationsBudget'
-                    value={ budget.giftsDonationsBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -149,8 +124,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='healthFitnessBudget'
-                    value={ budget.healthFitnessBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -158,8 +133,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='homeBudget'
-                    value={ budget.homeBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -167,8 +142,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='kidsBudget'
-                    value={ budget.kidsBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -176,8 +151,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='miscExpensesBudget'
-                    value={ budget.miscExpensesBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -185,8 +160,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='personalCareBudget'
-                    value={ budget.personalCareBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -194,8 +169,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='petsBudget'
-                    value={ budget.petsBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -203,8 +178,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='shoppingBudget'
-                    value={ budget.shoppingBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -212,8 +187,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='taxesBudget'
-                    value={ budget.taxesBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -221,8 +196,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='transferBudget'
-                    value={ budget.transferBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -230,8 +205,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='travelBudget'
-                    value={ budget.travelBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -239,8 +214,8 @@ const BudgetFrom = props => {
                 <input
                     type='number'
                     name='uncategorizedBudget'
-                    value={ budget.uncategorizedBudget || '' }
-                    onChange={ handleChange }
+                    value=""
+                    onChange=""
                     placeholder='0'
                 />
                 <button>Save</button>
@@ -250,3 +225,60 @@ const BudgetFrom = props => {
 }
 
 export default BudgetFrom
+    // const initBudget = {
+    //     autoTransportBudget: '',
+    //     billsUtilitiesBudget: '',
+    //     businessServicesBudget: '',
+    //     educationBudget: '',
+    //     entertainmentBudget: '',
+    //     feesChargesBudget: '',
+    //     financialBudget: '',
+    //     foodDiningBudget: '',
+    //     giftsDonationsBudget: '',
+    //     healthFitnessBudget: '',
+    //     homeBudget: '',
+    //     kidsBudget: '',
+    //     miscExpensesBudget: '',
+    //     personalCareBudget: '',
+    //     petsBudget: '',
+    //     shoppingBudget: '',
+    //     taxesBudget: '',
+    //     transferBudget: '',
+    //     travelBudget: '',
+    //     uncategorizedBudget: '',
+    // }
+    
+    // const [budget, setBudget] = useState(initBudget)
+    
+    // const handleChange = e => {
+    //     const { name, value } = e.target
+    //     setBudget({
+    //         [name]: value
+    //     })
+    // }
+    
+    // const handleSubmit = e => {
+    //     // e.preventDefault()
+    //     setBudget({
+    //         autoTransportBudget: budget.autoTransportBudget,
+    //         billsUtilitiesBudget: budget.billsUtilitiesBudget,
+    //         businessServicesBudget: budget.businessServicesBudget,
+    //         educationBudget: budget.educationBudget,
+    //         entertainmentBudget: budget.entertainmentBudget,
+    //         feesChargesBudget: budget.feesChargesBudget,
+    //         financialBudget: budget.financialBudget,
+    //         foodDiningBudget: budget.foodDiningBudget,
+    //         giftsDonationsBudget: budget.giftsDonationsBudget,
+    //         healthFitnessBudget: budget.healthFitnessBudget,
+    //         homeBudget: budget.homeBudget,
+    //         kidsBudget: budget.kidsBudget,
+    //         miscExpensesBudget: budget.miscExpensesBudget,
+    //         personalCareBudget: budget.personalCareBudget,
+    //         petsBudget: budget.petsBudget,
+    //         shoppingBudget: budget.shoppingBudget,
+    //         taxesBudget: budget.taxesBudget,
+    //         transferBudget: budget.transferBudget,
+    //         travelBudget: budget.travelBudget,
+    //         uncategorizedBudget: budget.uncategorizedBudget,
+    //     })
+    // }
