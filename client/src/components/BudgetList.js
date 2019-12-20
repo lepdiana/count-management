@@ -133,7 +133,28 @@ function BudgetList(){
                 <p>Uncategorized</p>
             </div>
             <div className='budgetListBudgetedContainer'>
-                <BudgetForm />
+                <BudgetForm 
+                    autoTransportAmt={ autoTransportAmt }
+                    billsUtilitiesAmt={ billsUtilitiesAmt }
+                    businessServicesAmt={ businessServices }
+                    educationAmt={ educationAmt }
+                    entertainmentAmt={ entertainmentAmt }
+                    feesChargesAmt={ feesChargesAmt }
+                    financialAmt={ financialAmt }
+                    foodDiningAmt={ foodDiningAmt }
+                    giftsDonationsAmt={ giftsDonationsAmt }
+                    healthFitnessAmt={ healthFitnessAmt }
+                    homeAmt={ homeAmt }
+                    kidsAmt={ homeAmt }
+                    miscExpensesAmt={ miscExpensesAmt }
+                    personalCareAmt={personalCareAmt}
+                    petsAmt={ petsAmt }
+                    shoppingAmt={ shoppingAmt }
+                    taxesAmt={ taxesAmt }
+                    transferAmt={ transferAmt }
+                    travelAmt={ travelAmt }
+                    uncategorizedAmt={ uncategorized }
+                />
             </div>
             <div className='budgetListActivityContainer'>
                 <p>${ autoTransportAmt }</p>
