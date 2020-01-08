@@ -39,7 +39,7 @@ const BudgetFrom = props => {
 
     return (
         <div>
-            <form id='jsform'>
+            <form id='autoTransportForm'>
                 <input
                     type='number'
                     name='autoTransportBudget'
@@ -48,7 +48,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button onClick={() => {alert('hello')}}>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='billsUtilitiesForm'>
                 <input
                     type='number'
                     name='billsUtilitiesBudget'
@@ -57,7 +59,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='businessServicesForm'>
                 <input
                     type='number'
                     name='businessServicesBudget'
@@ -66,7 +70,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='educationForm'>
                 <input
                     type='number'
                     name='educationBudget'
@@ -75,7 +81,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='entertainmentForm'>
                 <input
                     type='number'
                     name='entertainmentBudget'
@@ -84,7 +92,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='feesChargesForm'>
                 <input
                     type='number'
                     name='feesChargesBudget'
@@ -93,7 +103,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='financialForm'>
                 <input
                     type='number'
                     name='financialBudget'
@@ -102,7 +114,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='foodDiningForm'>
                 <input
                     type='number'
                     name='foodDiningBudget'
@@ -111,7 +125,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form  id='giftsDonationsForm'>
                 <input
                     type='number'
                     name='giftsDonationsBudget'
@@ -120,7 +136,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form  id='healthFitnessForm'>
                 <input
                     type='number'
                     name='healthFitnessBudget'
@@ -129,7 +147,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='homeForm'>
                 <input
                     type='number'
                     name='homeBudget'
@@ -138,7 +158,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='kidsForm'>
                 <input
                     type='number'
                     name='kidsBudget'
@@ -147,7 +169,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='miscExpensesForm'>
                 <input
                     type='number'
                     name='miscExpensesBudget'
@@ -156,7 +180,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='personalCareForm'>
                 <input
                     type='number'
                     name='personalCareBudget'
@@ -165,7 +191,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='petsForm'>
                 <input
                     type='number'
                     name='petsBudget'
@@ -174,7 +202,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='shoppingForm'>
                 <input
                     type='number'
                     name='shoppingBudget'
@@ -183,7 +213,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='taxes'>
                 <input
                     type='number'
                     name='taxesBudget'
@@ -192,7 +224,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='transferForm'>
                 <input
                     type='number'
                     name='transferBudget'
@@ -201,7 +235,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='travelForm'>
                 <input
                     type='number'
                     name='travelBudget'
@@ -210,7 +246,9 @@ const BudgetFrom = props => {
                     placeholder='0'
                 />
                 <button>Save</button>
-                <br />
+            </form>
+            <br />
+            <form id='uncategorizedForm'>
                 <input
                     type='number'
                     name='uncategorizedBudget'

@@ -107,6 +107,17 @@ function CrudProvider(props) {
         .catch(err => console.log(err))
     }
 
+    // const handleChangeTransaction = e => {
+    //     const { name, value } = e.target
+    //     setTransactionState({
+    //         [name]: value
+    //     })
+    // }
+
+    // const handleSubmitTransaction = e => {
+    //     axios.post()
+    // }
+
     const getUserBudgets = () => {
         axios.get('/api/budget/user')
             .then(res => {
