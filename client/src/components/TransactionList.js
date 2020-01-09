@@ -14,6 +14,8 @@ function TransactionList() {
     const initInputs = { date: '', title: '', amount: '', category:'' }
     const [inputs, setInputs] = useState(initInputs)
 
+
+    console.log(userTransactions)
     const mappedUserTransactions = userTransactions.map(transaction => 
         <Transaction 
             editTransaction={ editTransaction }
@@ -39,12 +41,12 @@ function TransactionList() {
     return(
         <div className='transactionListContainer'>
             <a className="button" href="#popup1">Click here to add a transaction</a>
-            <div>
+            {/* <div>
                 <p>Date</p>
                 <p>Title</p>
                 <p>Category</p>
                 <p>Amount</p>
-            </div>
+            </div> */}
             <div id="popup1" className="overlay">
                 <div className="popup">
                     <div className='addNewTransaction'>

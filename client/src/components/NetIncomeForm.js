@@ -3,18 +3,18 @@ import React from 'react'
 import '../styles/netIncomeForm.css'
 
 function NetIncomeForm(props) {
-    const { inputs, handleChange, handleSubmit } = props
+    const { inputs, handleChangeTransaction, handleSubmitTransaction } = props
 
     return (
         <div className='netIncomeFormContainer'>
-        <form onSubmit={handleSubmit} className='netIncomeForm'>
+        <form onSubmit={handleSubmitTransaction} className='netIncomeForm'>
                     <input 
                         type='number' 
                         name='year'
                         value={inputs.year}
-                        onChange={handleChange}
+                        onChange={handleChangeTransaction}
                         placeholder='Year'/>
-                    <select id='userIncomeMonthChoice' name='month' onChange={handleChange}>
+                    <select id='userIncomeMonthChoice' name='month' onChange={handleChangeTransaction}>
                         <option value='select'>---</option>
                         <option value='January'>January</option>
                         <option value='Febuary'>February</option>
@@ -33,7 +33,7 @@ function NetIncomeForm(props) {
                         type='number' 
                         name='income'
                         value={inputs.income}
-                        onChange={handleChange}
+                        onChange={handleChangeTransaction}
                         placeholder='Income'/>
                     <button className='netIncomeBtn'>Submit</button>
                 </form>
